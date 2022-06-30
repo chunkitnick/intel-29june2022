@@ -42,4 +42,4 @@ jobs:
           push: true
           #tags: ckliew/httpapp:test
           #tags: ckliew/httpapp:${{ env.GITHUBRUNNERID}}
-          tags: ckliew/httpapp:$GITHUB_RUN_NUMBER
+          tags: ${{env.IMGNAME}}
