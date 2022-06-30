@@ -43,7 +43,7 @@ jobs:
         with:
           push: true
           #tags: ckliew/httpapp:test
-          tags: ${{ env.IMAGENAME}}
+          tags: ${{ env.IMGNAME}}
           build-args: |
-            IMAGENAME: ${{ env.IMGNAME }}
+            IMGNAME: ${{ env.IMGNAME }}
           ##tags: "${{env.IMGNAME}}"
