@@ -42,6 +42,6 @@ jobs:
           push: true
           #tags: ckliew/httpapp:test
           tags: ckliew/httpapp:${{ env.IMGNAME}}
-          build_args:|
+          build_args: |
             IMGNAME: ${{ env.IMGNAME }}
           #tags: "${{env.IMGNAME}}"
