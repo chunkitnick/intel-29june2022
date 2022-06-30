@@ -11,7 +11,7 @@ on:
 
 env:
   GITHUBRUNNERID : $GITHUB_RUN_NUMBER
-  IMGNAME: "ckliew/httpapp:$GITHUB_RUN_NUMBER"
+  #IMGNAME: "ckliew/httpapp:$GITHUB_RUN_NUMBER"
 
 jobs:
   build:
@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: abc
-        run: echo ${{env.IMGNAME}}
+        run: |
+          echo "IMGNAME=ckliew/httpapp:$GITHUB_RUN_NUMBER"
+          echo "IMGNAME=ckliew/httpapp:$GITHUB_RUN_NUMBER" > $IMGNAME
 
       - name: Checkout Code
         uses: actions/checkout@v3
