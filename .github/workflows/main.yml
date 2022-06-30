@@ -20,8 +20,8 @@ jobs:
     steps:
       - name: abc
         run: |
-          echo "IMGNAME=ckliew/httpapp:$GITHUB_RUN_NUMBER"
-          echo "IMGNAME=ckliew/httpapp:$GITHUB_RUN_NUMBER" >> $IMGNAME
+          echo "IMGNAME=ckliew/httpapp:${GITHUB_RUN_NUMBER}"
+          echo "IMGNAME=ckliew/httpapp:${GITHUB_RUN_NUMBER}" > $IMGNAME
 
       - name: Checkout Code
         uses: actions/checkout@v3
