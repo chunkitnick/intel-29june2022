@@ -41,5 +41,5 @@ jobs:
         with:
           push: true
           #tags: ckliew/httpapp:test
-          #tags: ckliew/httpapp:${{ env.GITHUBRUNNERID}}
-          tags: "${{env.IMGNAME}}"
+          tags: ckliew/httpapp:\${{ env.GITHUBRUNNERID}}
+          #tags: "${{env.IMGNAME}}"
