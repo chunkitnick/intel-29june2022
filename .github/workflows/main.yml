@@ -35,15 +35,15 @@ jobs:
           username: ckliew
           password: ${{ secrets.DOCKER_PASSWORD }}
         
-      - name: abc
-        run: echo public-${{env.GITHUBRUNNERID}}.zip
+      #- name: abc
+      #  run: echo public-${{env.GITHUBRUNNERID}}.zip
 
       - name: Build and Push
         uses: docker/build-push-action@v3
         with:
           push: true
           #tags: ckliew/httpapp:test
-          tags: ${{ env.IMGNAME}}
+          tags: ${{ env.IMAGENAME}}
           build-args: |
-            IMGNAME: ${{ env.IMGNAME }}
+            IMAGENAME: ${{ env.IMGNAME }}
           ##tags: "${{env.IMGNAME}}"
