@@ -36,5 +36,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ckliew/httpapp:test
-
+          #tags: ckliew/httpapp:test
+          #tags: ckliew/httpapp:${{ env.GITHUBRUNNERID}}
+          tags: ckliew/httpapp:$GITHUB_RUN_NUMBER
